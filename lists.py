@@ -16,3 +16,13 @@ def menu():
     print("7. Limpar a lista")
     print("8. Mostrar a lista")
     print("9. Sair")
+
+def main():
+    lista = []  # Lista inicial
+    while True:
+        menu()
+        opcao = input("Escolha uma opção: ")
+        try:
+            processar_opcao(opcao, lista)
+        except ValueError as e:
+            print(f"Erro: {e}")
