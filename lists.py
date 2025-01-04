@@ -94,3 +94,10 @@ def limpar_lista(lista):
 
 def mostrar_lista(lista):
     print("Lista atual:", lista)
+
+def input_validado(mensagem, tipo=int):
+    while True:
+        try:
+            return tipo(input(mensagem))
+        except ValueError:
+            print("Entrada inválida. Tente novamente.")
