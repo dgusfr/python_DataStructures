@@ -49,3 +49,8 @@ def processar_opcao(opcao, lista):
         sys.exit(0)
     else:
         print("Opção inválida. Tente novamente.")
+
+def adicionar_elemento(lista):
+    elemento = input("Digite o elemento para adicionar: ")
+    lista.append(elemento)
+    print(f"'{elemento}' foi adicionado à lista.")
