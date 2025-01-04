@@ -79,3 +79,11 @@ def inserir_em_posicao(lista):
         print(f"'{elemento}' foi inserido na posição {posicao}.")
     else:
         print("Índice inválido.")
+
+def remover_por_indice(lista):
+    posicao = int(input("Digite o índice para remover: "))
+    if 0 <= posicao < len(lista):
+        elemento = lista.pop(posicao)
+        print(f"'{elemento}' foi removido da posição {posicao}.")
+    else:
+        print("Índice inválido.")
