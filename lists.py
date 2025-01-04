@@ -70,3 +70,12 @@ def ordenar_lista(lista):
 def reverter_lista(lista):
     lista.reverse()
     print("A lista foi invertida.")
+
+def inserir_em_posicao(lista):
+    elemento = input("Digite o elemento para inserir: ")
+    posicao = int(input("Digite a posição (índice): "))
+    if 0 <= posicao <= len(lista):
+        lista.insert(posicao, elemento)
+        print(f"'{elemento}' foi inserido na posição {posicao}.")
+    else:
+        print("Índice inválido.")
