@@ -18,3 +18,15 @@ O foco principal deste projeto é fornecer uma ferramenta prática para aprender
 
 ### Dependências
 - **Python 3.6 ou superior**
+
+## Funcionalidades
+
+- **Adicionar elemento**: Insere um novo elemento no final da lista.
+- **Remover elemento**: Remove um elemento específico da lista.
+- **Ordenar lista**: Organiza os elementos em ordem crescente.
+- **Reverter lista**: Inverte a ordem dos elementos na lista.
+- **Inserir elemento em posição específica**: Adiciona um elemento em um índice definido pelo usuário.
+- **Remover elemento por índice**: Elimina o elemento de uma posição específica.
+- **Limpar lista**: Remove todos os elementos da lista.
+- **Visualizar lista**: Exibe os elementos da lista atual.
+- **Sair**: Finaliza a aplicação.
