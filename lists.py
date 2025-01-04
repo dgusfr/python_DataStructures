@@ -54,3 +54,11 @@ def adicionar_elemento(lista):
     elemento = input("Digite o elemento para adicionar: ")
     lista.append(elemento)
     print(f"'{elemento}' foi adicionado à lista.")
+
+def remover_elemento(lista):
+    elemento = input("Digite o elemento para remover: ")
+    try:
+        lista.remove(elemento)
+        print(f"'{elemento}' foi removido da lista.")
+    except ValueError:
+        print(f"Erro: '{elemento}' não está na lista.")
