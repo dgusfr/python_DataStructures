@@ -5,6 +5,7 @@ if sys.version_info < (3, 6):
     print("Este script requer Python 3.6 ou superior.")
     sys.exit(1)
 
+# Função que exibe o menu principal
 def menu():
     print("\nMenu de Operações com Lista")
     print("1. Adicionar um elemento")
@@ -17,6 +18,7 @@ def menu():
     print("8. Mostrar a lista")
     print("9. Sair")
 
+# Função principal
 def main():
     lista = []  # Lista inicial
     while True:
@@ -27,6 +29,7 @@ def main():
         except ValueError as e:
             print(f"Erro: {e}")
 
+# Processa a escolha do usuário no menu
 def processar_opcao(opcao, lista):
     if opcao == '1':
         adicionar_elemento(lista)
@@ -50,11 +53,13 @@ def processar_opcao(opcao, lista):
     else:
         print("Opção inválida. Tente novamente.")
 
+# Adiciona um elemento à lista
 def adicionar_elemento(lista):
     elemento = input("Digite o elemento para adicionar: ")
     lista.append(elemento)
     print(f"'{elemento}' foi adicionado à lista.")
 
+# Remove um elemento da lista
 def remover_elemento(lista):
     elemento = input("Digite o elemento para remover: ")
     try:
@@ -63,44 +68,50 @@ def remover_elemento(lista):
     except ValueError:
         print(f"Erro: '{elemento}' não está na lista.")
 
+# Ordena a lista
 def ordenar_lista(lista):
     lista.sort()
     print("A lista foi ordenada.")
 
+# Reverte a lista
 def reverter_lista(lista):
     lista.reverse()
     print("A lista foi invertida.")
 
+# Insere um elemento em uma posição específica
 def inserir_em_posicao(lista):
     elemento = input("Digite o elemento para inserir: ")
-    posicao = int(input("Digite a posição (índice): "))
-    if 0 <= posicao <= len(lista):
-        lista.insert(posicao, elemento)
-        print(f"'{elemento}' foi inserido na posição {posicao}.")
-    else:
-        print("Índice inválido.")
+    try:
+        posicao = int(input("Digite a posição (índice): "))
+        if 0 <= posicao <= len(lista):
+            lista.insert(posicao, elemento)
+            print(f"'{elemento}' foi inserido na posição {posicao}.")
+        else:
+            print("Índice inválido.")
+    except ValueError:
+        print("Por favor, insira um número válido para a posição.")
 
+# Remove um elemento por índice
 def remover_por_indice(lista):
-    posicao = int(input("Digite o índice para remover: "))
-    if 0 <= posicao < len(lista):
-        elemento = lista.pop(posicao)
-        print(f"'{elemento}' foi removido da posição {posicao}.")
-    else:
-        print("Índice inválido.")
+    try:
+        posicao = int(input("Digite o índice para remover: "))
+        if 0 <= posicao < len(lista):
+            elemento = lista.pop(posicao)
+            print(f"'{elemento}' foi removido da posição {posicao}.")
+        else:
+            print("Índice inválido.")
+    except ValueError:
+        print("Por favor, insira um número válido para o índice.")
 
+# Limpa toda a lista
 def limpar_lista(lista):
     lista.clear()
     print("A lista foi completamente limpa.")
 
+# Exibe os elementos da lista
 def mostrar_lista(lista):
     print("Lista atual:", lista)
 
-def input_validado(mensagem, tipo=int):
-    while True:
-        try:
-            return tipo(input(mensagem))
-        except ValueError:
-            print("Entrada inválida. Tente novamente.")
-
+# Inicializa o programa
 if __name__ == "__main__":
     main()
