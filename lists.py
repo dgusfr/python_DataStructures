@@ -91,3 +91,6 @@ def remover_por_indice(lista):
 def limpar_lista(lista):
     lista.clear()
     print("A lista foi completamente limpa.")
+
+def mostrar_lista(lista):
+    print("Lista atual:", lista)
