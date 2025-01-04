@@ -66,3 +66,7 @@ def remover_elemento(lista):
 def ordenar_lista(lista):
     lista.sort()
     print("A lista foi ordenada.")
+
+def reverter_lista(lista):
+    lista.reverse()
+    print("A lista foi invertida.")
