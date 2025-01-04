@@ -87,3 +87,7 @@ def remover_por_indice(lista):
         print(f"'{elemento}' foi removido da posição {posicao}.")
     else:
         print("Índice inválido.")
+
+def limpar_lista(lista):
+    lista.clear()
+    print("A lista foi completamente limpa.")
