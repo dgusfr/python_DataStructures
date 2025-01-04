@@ -62,3 +62,7 @@ def remover_elemento(lista):
         print(f"'{elemento}' foi removido da lista.")
     except ValueError:
         print(f"Erro: '{elemento}' não está na lista.")
+
+def ordenar_lista(lista):
+    lista.sort()
+    print("A lista foi ordenada.")
