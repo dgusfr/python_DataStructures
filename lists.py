@@ -101,3 +101,6 @@ def input_validado(mensagem, tipo=int):
             return tipo(input(mensagem))
         except ValueError:
             print("Entrada inválida. Tente novamente.")
+
+if __name__ == "__main__":
+    main()
