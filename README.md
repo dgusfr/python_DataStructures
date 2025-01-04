@@ -31,5 +31,5 @@ O foco principal deste projeto é fornecer uma ferramenta prática para aprender
 - **Visualizar lista**: Exibe os elementos da lista atual.
 - **Sair**: Finaliza a aplicação.
 
-
+## Autor
 Desenvolvido por Diego Franco.  
