@@ -26,3 +26,26 @@ def main():
             processar_opcao(opcao, lista)
         except ValueError as e:
             print(f"Erro: {e}")
+
+def processar_opcao(opcao, lista):
+    if opcao == '1':
+        adicionar_elemento(lista)
+    elif opcao == '2':
+        remover_elemento(lista)
+    elif opcao == '3':
+        ordenar_lista(lista)
+    elif opcao == '4':
+        reverter_lista(lista)
+    elif opcao == '5':
+        inserir_em_posicao(lista)
+    elif opcao == '6':
+        remover_por_indice(lista)
+    elif opcao == '7':
+        limpar_lista(lista)
+    elif opcao == '8':
+        mostrar_lista(lista)
+    elif opcao == '9':
+        print("Saindo...")
+        sys.exit(0)
+    else:
+        print("Opção inválida. Tente novamente.")
