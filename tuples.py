@@ -24,13 +24,19 @@ def main():
             processar_opcao(opcao, tupla)
         except ValueError as e:
             print(f"Erro: {e}")
-            
+
 def criar_tupla():
     elementos = input("Digite os elementos da tupla separados por vírgula: ")
     nova_tupla = tuple(elementos.split(","))
     print(f"Tupla criada: {nova_tupla}")
     return nova_tupla
 
+def concatenar_tuplas(tupla):
+    elementos = input("Digite os elementos para concatenar, separados por vírgula: ")
+    nova_tupla = tuple(elementos.split(","))
+    resultado = tupla + nova_tupla
+    print(f"Resultado da concatenação: {resultado}")
+    return resultado
 
 def processar_opcao(opcao, tupla):
     if opcao == '1':
