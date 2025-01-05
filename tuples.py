@@ -45,6 +45,11 @@ def obter_elemento_por_indice(tupla):
     except (IndexError, ValueError):
         print("Índice inválido.")
 
+def contar_ocorrencias(tupla):
+    elemento = input("Digite o elemento para contar: ")
+    ocorrencias = tupla.count(elemento)
+    print(f"O elemento '{elemento}' aparece {ocorrencias} vez(es) na tupla.")
+
 def concatenar_tuplas(tupla):
     elementos = input("Digite os elementos para concatenar, separados por vírgula: ")
     nova_tupla = tuple(elementos.split(","))
