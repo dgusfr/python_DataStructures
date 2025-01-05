@@ -14,3 +14,13 @@ def menu():
     print("6. Verificar se um elemento existe")
     print("7. Mostrar a tupla atual")
     print("8. Sair")
+
+def main():
+    tupla = ()  # Tupla inicial vazia
+    while True:
+        menu()
+        opcao = input("Escolha uma opção: ")
+        try:
+            processar_opcao(opcao, tupla)
+        except ValueError as e:
+            print(f"Erro: {e}")
