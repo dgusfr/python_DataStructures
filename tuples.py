@@ -38,6 +38,13 @@ def concatenar_tuplas(tupla):
     print(f"Resultado da concatenação: {resultado}")
     return resultado
 
+def obter_elemento_por_indice(tupla):
+    try:
+        indice = int(input("Digite o índice do elemento: "))
+        print(f"Elemento no índice {indice}: {tupla[indice]}")
+    except (IndexError, ValueError):
+        print("Índice inválido.")
+
 def concatenar_tuplas(tupla):
     elementos = input("Digite os elementos para concatenar, separados por vírgula: ")
     nova_tupla = tuple(elementos.split(","))
