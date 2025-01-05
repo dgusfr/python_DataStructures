@@ -50,6 +50,14 @@ def contar_ocorrencias(tupla):
     ocorrencias = tupla.count(elemento)
     print(f"O elemento '{elemento}' aparece {ocorrencias} vez(es) na tupla.")
 
+def obter_indice(tupla):
+    elemento = input("Digite o elemento para encontrar o índice: ")
+    try:
+        indice = tupla.index(elemento)
+        print(f"O elemento '{elemento}' está no índice {indice}.")
+    except ValueError:
+        print(f"Erro: '{elemento}' não está na tupla.")
+
 def concatenar_tuplas(tupla):
     elementos = input("Digite os elementos para concatenar, separados por vírgula: ")
     nova_tupla = tuple(elementos.split(","))
