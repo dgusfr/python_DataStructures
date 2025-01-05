@@ -39,6 +39,6 @@ Este projeto oferece uma interface interativa para manipular **tuplas** no termi
 - **Sair:** Encerra a aplicação.
 
 
-Autor
+## Autor
 Desenvolvido por Diego Franco.
 
