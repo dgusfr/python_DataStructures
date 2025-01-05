@@ -95,3 +95,6 @@ def processar_opcao(opcao, tupla):
         sys.exit(0)
     else:
         print("Opção inválida. Tente novamente.")
+
+if __name__ == "__main__":
+    main()
