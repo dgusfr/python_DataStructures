@@ -65,6 +65,9 @@ def verificar_elemento(tupla):
     else:
         print(f"'{elemento}' não está na tupla.")
 
+def mostrar_tupla(tupla):
+    print("Tupla atual:", tupla)
+
 def concatenar_tuplas(tupla):
     elementos = input("Digite os elementos para concatenar, separados por vírgula: ")
     nova_tupla = tuple(elementos.split(","))
