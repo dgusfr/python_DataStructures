@@ -58,6 +58,13 @@ def obter_indice(tupla):
     except ValueError:
         print(f"Erro: '{elemento}' não está na tupla.")
 
+def verificar_elemento(tupla):
+    elemento = input("Digite o elemento para verificar: ")
+    if elemento in tupla:
+        print(f"'{elemento}' está na tupla.")
+    else:
+        print(f"'{elemento}' não está na tupla.")
+
 def concatenar_tuplas(tupla):
     elementos = input("Digite os elementos para concatenar, separados por vírgula: ")
     nova_tupla = tuple(elementos.split(","))
