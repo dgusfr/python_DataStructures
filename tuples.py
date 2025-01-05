@@ -24,6 +24,13 @@ def main():
             processar_opcao(opcao, tupla)
         except ValueError as e:
             print(f"Erro: {e}")
+            
+def criar_tupla():
+    elementos = input("Digite os elementos da tupla separados por vírgula: ")
+    nova_tupla = tuple(elementos.split(","))
+    print(f"Tupla criada: {nova_tupla}")
+    return nova_tupla
+
 
 def processar_opcao(opcao, tupla):
     if opcao == '1':
