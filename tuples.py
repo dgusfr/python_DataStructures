@@ -38,6 +38,13 @@ def concatenar_tuplas(tupla):
     print(f"Resultado da concatenação: {resultado}")
     return resultado
 
+def concatenar_tuplas(tupla):
+    elementos = input("Digite os elementos para concatenar, separados por vírgula: ")
+    nova_tupla = tuple(elementos.split(","))
+    resultado = tupla + nova_tupla
+    print(f"Resultado da concatenação: {resultado}")
+    return resultado
+
 def processar_opcao(opcao, tupla):
     if opcao == '1':
         tupla = criar_tupla()
