@@ -103,3 +103,14 @@ try:
     main()
 except Exception as e:
     print(f"Ocorreu um erro: {e}")
+
+def menu():
+    print("\nMenu de Operações com Tupla")
+    print("1. Criar uma tupla")
+    print("2. Concatenar tuplas")
+    print("3. Obter elemento por índice")
+    print("4. Contar ocorrências de um elemento")
+    print("5. Obter índice de um elemento")
+    print("6. Verificar se um elemento existe")
+    print("7. Mostrar a tupla atual")
+    print("8. Sair")
