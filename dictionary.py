@@ -67,3 +67,6 @@ def listar_pares(dicionario):
     print("Pares chave-valor no dicionário:")
     for chave, valor in dicionario.items():
         print(f"{chave}: {valor}")
+def limpar_dicionario(dicionario):
+    dicionario.clear()
+    print("Dicionário limpo com sucesso.")
