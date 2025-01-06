@@ -135,3 +135,10 @@ def main():
             processar_opcao(opcao, dicionario)
         except Exception as e:
             print(f"Ocorreu um erro: {e}")
+
+def obter_valor(dicionario):
+    chave = input("Digite a chave: ")
+    if chave in dicionario:
+        print(f"O valor associado à chave '{chave}' é '{dicionario[chave]}'.")
+    else:
+        print(f"Erro: chave '{chave}' não encontrada.")
