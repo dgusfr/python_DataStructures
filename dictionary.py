@@ -70,3 +70,28 @@ def listar_pares(dicionario):
 def limpar_dicionario(dicionario):
     dicionario.clear()
     print("Dicionário limpo com sucesso.")
+
+def processar_opcao(opcao, dicionario):
+    if opcao == '1':
+        adicionar_chave_valor(dicionario)
+    elif opcao == '2':
+        atualizar_valor(dicionario)
+    elif opcao == '3':
+        remover_chave(dicionario)
+    elif opcao == '4':
+        obter_valor(dicionario)
+    elif opcao == '5':
+        verificar_chave(dicionario)
+    elif opcao == '6':
+        listar_chaves(dicionario)
+    elif opcao == '7':
+        listar_valores(dicionario)
+    elif opcao == '8':
+        listar_pares(dicionario)
+    elif opcao == '9':
+        limpar_dicionario(dicionario)
+    elif opcao == '10':
+        print("Saindo...")
+        sys.exit(0)
+    else:
+        print("Opção inválida. Tente novamente.")
