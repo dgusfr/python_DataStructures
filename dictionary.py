@@ -95,3 +95,10 @@ def processar_opcao(opcao, dicionario):
         sys.exit(0)
     else:
         print("Opção inválida. Tente novamente.")
+
+def main():
+    dicionario = {}  # Dicionário inicial vazio
+    while True:
+        menu()
+        opcao = input("Escolha uma opção: ")
+        processar_opcao(opcao, dicionario)
