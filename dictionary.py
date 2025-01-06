@@ -150,3 +150,12 @@ def listar_chaves(dicionario):
             print(chave)
     else:
         print("O dicionário está vazio.")
+
+def adicionar_chave_valor(dicionario):
+    chave = input("Digite a chave: ")
+    if chave in dicionario:
+        print(f"Erro: a chave '{chave}' já existe.")
+    else:
+        valor = input("Digite o valor: ")
+        dicionario[chave] = valor
+        print(f"Chave-valor '{chave}: {valor}' adicionada com sucesso!")
