@@ -14,3 +14,10 @@ def menu():
     print("10. Sair")
 
 print("Menu inicializado.")
+
+
+def adicionar_chave_valor(dicionario):
+    chave = input("Digite a chave: ")
+    valor = input("Digite o valor: ")
+    dicionario[chave] = valor
+    print(f"Chave-valor '{chave}: {valor}' adicionada com sucesso!")
