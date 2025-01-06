@@ -57,3 +57,8 @@ def listar_chaves(dicionario):
     print("Chaves no dicionário:")
     for chave in dicionario.keys():
         print(chave)
+
+def listar_valores(dicionario):
+    print("Valores no dicionário:")
+    for valor in dicionario.values():
+        print(valor)
