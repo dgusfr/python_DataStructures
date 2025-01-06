@@ -109,3 +109,19 @@ if sys.version_info < (3, 6):
 
 print("Bem-vindo à CLI de Operações com Dicionário!")
 print("Gerencie seu dicionário de forma interativa.")
+
+def menu():
+    print("\n" + "=" * 30)
+    print("Menu de Operações com Dicionário")
+    print("=" * 30)
+    print("1. Adicionar uma chave-valor")
+    print("2. Atualizar valor de uma chave existente")
+    print("3. Remover uma chave")
+    print("4. Obter valor por chave")
+    print("5. Verificar existência de chave")
+    print("6. Listar todas as chaves")
+    print("7. Listar todos os valores")
+    print("8. Listar todos os pares chave-valor")
+    print("9. Limpar o dicionário")
+    print("10. Sair")
+    print("=" * 30)
