@@ -159,3 +159,11 @@ def adicionar_chave_valor(dicionario):
         valor = input("Digite o valor: ")
         dicionario[chave] = valor
         print(f"Chave-valor '{chave}: {valor}' adicionada com sucesso!")
+
+def listar_pares(dicionario):
+    if dicionario:
+        print("Pares chave-valor no dicionário:")
+        for chave, valor in dicionario.items():
+            print(f"- {chave}: {valor}")
+    else:
+        print("O dicionário está vazio.")
