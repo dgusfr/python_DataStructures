@@ -52,3 +52,8 @@ def verificar_chave(dicionario):
         print(f"A chave '{chave}' existe no dicionário.")
     else:
         print(f"A chave '{chave}' não existe no dicionário.")
+
+def listar_chaves(dicionario):
+    print("Chaves no dicionário:")
+    for chave in dicionario.keys():
+        print(chave)
