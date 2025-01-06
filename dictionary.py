@@ -102,3 +102,7 @@ def main():
         menu()
         opcao = input("Escolha uma opção: ")
         processar_opcao(opcao, dicionario)
+
+if sys.version_info < (3, 6):
+    print("Este script requer Python 3.6 ou superior.")
+    sys.exit(1)
