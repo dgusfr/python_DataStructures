@@ -142,3 +142,11 @@ def obter_valor(dicionario):
         print(f"O valor associado à chave '{chave}' é '{dicionario[chave]}'.")
     else:
         print(f"Erro: chave '{chave}' não encontrada.")
+
+def listar_chaves(dicionario):
+    if dicionario:
+        print("Chaves no dicionário:")
+        for chave in dicionario.keys():
+            print(chave)
+    else:
+        print("O dicionário está vazio.")
