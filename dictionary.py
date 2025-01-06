@@ -30,3 +30,11 @@ def atualizar_valor(dicionario):
         print(f"Valor da chave '{chave}' atualizado para '{novo_valor}'.")
     else:
         print(f"Chave '{chave}' não encontrada.")
+
+def remover_chave(dicionario):
+    chave = input("Digite a chave para remover: ")
+    if chave in dicionario:
+        del dicionario[chave]
+        print(f"Chave '{chave}' removida com sucesso.")
+    else:
+        print(f"Chave '{chave}' não encontrada.")
