@@ -125,3 +125,13 @@ def menu():
     print("9. Limpar o dicionário")
     print("10. Sair")
     print("=" * 30)
+
+def main():
+    dicionario = {}
+    while True:
+        try:
+            menu()
+            opcao = input("Escolha uma opção: ")
+            processar_opcao(opcao, dicionario)
+        except Exception as e:
+            print(f"Ocorreu um erro: {e}")
