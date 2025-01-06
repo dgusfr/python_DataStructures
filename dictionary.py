@@ -38,3 +38,10 @@ def remover_chave(dicionario):
         print(f"Chave '{chave}' removida com sucesso.")
     else:
         print(f"Chave '{chave}' não encontrada.")
+
+def obter_valor(dicionario):
+    chave = input("Digite a chave: ")
+    if chave in dicionario:
+        print(f"O valor associado à chave '{chave}' é '{dicionario[chave]}'.")
+    else:
+        print(f"Chave '{chave}' não encontrada.")
