@@ -45,3 +45,10 @@ def obter_valor(dicionario):
         print(f"O valor associado à chave '{chave}' é '{dicionario[chave]}'.")
     else:
         print(f"Chave '{chave}' não encontrada.")
+
+def verificar_chave(dicionario):
+    chave = input("Digite a chave para verificar: ")
+    if chave in dicionario:
+        print(f"A chave '{chave}' existe no dicionário.")
+    else:
+        print(f"A chave '{chave}' não existe no dicionário.")
