@@ -47,12 +47,20 @@ def add_element():
         my_set.add(element)
         print(f"Elemento '{element}' adicionado com sucesso.")
     perform_operation()
-    
+
 def remove_element():
     element = input("Digite o elemento para remover: ")
     if element in my_set:
         my_set.remove(element)
         print(f"Elemento '{element}' removido com sucesso.")
+    else:
+        print(f"O elemento '{element}' não foi encontrado no conjunto.")
+    perform_operation()
+
+def check_element_exists():
+    element = input("Digite o elemento para verificar: ")
+    if element in my_set:
+        print(f"O elemento '{element}' existe no conjunto.")
     else:
         print(f"O elemento '{element}' não foi encontrado no conjunto.")
     perform_operation()
