@@ -64,3 +64,12 @@ def check_element_exists():
     else:
         print(f"O elemento '{element}' não foi encontrado no conjunto.")
     perform_operation()
+
+def list_elements():
+    if len(my_set) == 0:
+        print("O conjunto está vazio.")
+    else:
+        print("Elementos no conjunto:")
+        for item in my_set:
+            print(item)
+    perform_operation()
