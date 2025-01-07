@@ -112,3 +112,7 @@ def display_help():
     print("4: Listar todos os elementos")
     print("5: Limpar o conjunto")
     print("6: Sair")
+
+def print_set():
+    print("Conjunto atual:")
+    print(", ".join(my_set) if my_set else "O conjunto está vazio.")
