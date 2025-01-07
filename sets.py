@@ -116,3 +116,9 @@ def display_help():
 def print_set():
     print("Conjunto atual:")
     print(", ".join(my_set) if my_set else "O conjunto está vazio.")
+
+def initialize_set_from_input():
+    elements = input("Digite elementos separados por vírgula: ").split(",")
+    global my_set
+    my_set = set(elements)
+    print(f"Conjunto inicializado com os elementos: {my_set}")
