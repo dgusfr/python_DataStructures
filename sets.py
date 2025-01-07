@@ -78,3 +78,7 @@ def clear_set():
     my_set.clear()
     print("O conjunto foi limpo com sucesso.")
     perform_operation()
+
+def exit_program():
+    print("Encerrando o programa. Até logo!")
+    exit()
