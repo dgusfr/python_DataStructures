@@ -128,3 +128,6 @@ def log_operation(operation, element=None):
         print(f"Operação '{operation}' realizada no elemento '{element}'.")
     else:
         print(f"Operação '{operation}' realizada.")
+
+if __name__ == "__main__":
+    start_program()
