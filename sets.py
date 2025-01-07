@@ -93,3 +93,10 @@ def input_with_validation():
                 print("Opção inválida. Digite um número entre 1 e 6.")
         except ValueError:
             print("Erro na entrada. Tente novamente.")
+
+operation_count = 0
+
+def increment_operation_count():
+    global operation_count
+    operation_count += 1
+    print(f"Operações realizadas: {operation_count}")
