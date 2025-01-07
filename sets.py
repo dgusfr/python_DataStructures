@@ -13,3 +13,8 @@ def display_menu():
     print("6. Sair\n")
 
 my_set = set()
+
+def start_program():
+    clear_screen()
+    print("Bem-vindo! Comece a gerenciar seu conjunto.")
+    perform_operation()
