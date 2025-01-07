@@ -100,3 +100,6 @@ def increment_operation_count():
     global operation_count
     operation_count += 1
     print(f"Operações realizadas: {operation_count}")
+
+def print_feedback(message):
+    print(f"[INFO]: {message}")
