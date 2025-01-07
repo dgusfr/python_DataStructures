@@ -73,3 +73,8 @@ def list_elements():
         for item in my_set:
             print(item)
     perform_operation()
+
+def clear_set():
+    my_set.clear()
+    print("O conjunto foi limpo com sucesso.")
+    perform_operation()
