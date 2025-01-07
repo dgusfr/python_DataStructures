@@ -38,3 +38,12 @@ def perform_operation():
         case _:
             print("Opção inválida. Tente novamente.")
             perform_operation()
+
+def add_element():
+    element = input("Digite o elemento para adicionar: ")
+    if element in my_set:
+        print(f"O elemento '{element}' já existe no conjunto.")
+    else:
+        my_set.add(element)
+        print(f"Elemento '{element}' adicionado com sucesso.")
+    perform_operation()
