@@ -82,3 +82,14 @@ def clear_set():
 def exit_program():
     print("Encerrando o programa. Até logo!")
     exit()
+
+def input_with_validation():
+    while True:
+        try:
+            option = input("Digite uma opção: ")
+            if option.isdigit() and 1 <= int(option) <= 6:
+                return option
+            else:
+                print("Opção inválida. Digite um número entre 1 e 6.")
+        except ValueError:
+            print("Erro na entrada. Tente novamente.")
