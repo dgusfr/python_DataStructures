@@ -11,3 +11,5 @@ def display_menu():
     print("4. Listar todos os elementos")
     print("5. Limpar o conjunto")
     print("6. Sair\n")
+
+my_set = set()
