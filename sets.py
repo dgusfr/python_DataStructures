@@ -18,3 +18,23 @@ def start_program():
     clear_screen()
     print("Bem-vindo! Comece a gerenciar seu conjunto.")
     perform_operation()
+
+def perform_operation():
+    display_menu()
+    option = input("Digite a opção desejada: ")
+    match option:
+        case "1":
+            add_element()
+        case "2":
+            remove_element()
+        case "3":
+            check_element_exists()
+        case "4":
+            list_elements()
+        case "5":
+            clear_set()
+        case "6":
+            exit_program()
+        case _:
+            print("Opção inválida. Tente novamente.")
+            perform_operation()
