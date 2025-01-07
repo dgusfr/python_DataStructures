@@ -103,3 +103,12 @@ def increment_operation_count():
 
 def print_feedback(message):
     print(f"[INFO]: {message}")
+
+def display_help():
+    print("Menu de ajuda:")
+    print("1: Adicionar elemento")
+    print("2: Remover elemento")
+    print("3: Verificar existência de elemento")
+    print("4: Listar todos os elementos")
+    print("5: Limpar o conjunto")
+    print("6: Sair")
