@@ -122,3 +122,9 @@ def initialize_set_from_input():
     global my_set
     my_set = set(elements)
     print(f"Conjunto inicializado com os elementos: {my_set}")
+
+def log_operation(operation, element=None):
+    if element:
+        print(f"Operação '{operation}' realizada no elemento '{element}'.")
+    else:
+        print(f"Operação '{operation}' realizada.")
