@@ -15,3 +15,4 @@ count = my_list.count("elemento_repetido")
 new_list = my_list + ["novo_elemento_1", "novo_elemento_2"]
 for item in my_list:
     print(item)
+last_element = my_list.pop()
