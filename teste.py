@@ -20,3 +20,4 @@ sub_list = my_list[1:4]
 filtered_list = [x for x in my_list if "criterio" in x]
 string_to_list = "a,b,c".split(",")
 list_to_string = ",".join(my_list)
+repeated_list = my_list * 3
