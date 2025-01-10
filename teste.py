@@ -9,3 +9,4 @@ if "elemento" in my_list:
 my_list.insert(2, "elemento_inserido")
 
 copied_list = my_list.copy()
+my_list.clear()
