@@ -8,3 +8,4 @@ if "elemento" in my_list:
     print("O elemento está na lista.")
 my_list.insert(2, "elemento_inserido")
 
+copied_list = my_list.copy()
