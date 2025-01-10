@@ -17,3 +17,4 @@ for item in my_list:
     print(item)
 last_element = my_list.pop()
 sub_list = my_list[1:4]
+filtered_list = [x for x in my_list if "criterio" in x]
