@@ -10,3 +10,4 @@ my_list.insert(2, "elemento_inserido")
 
 copied_list = my_list.copy()
 my_list.clear()
+index = my_list.index("elemento_procurado")
