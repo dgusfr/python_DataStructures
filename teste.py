@@ -12,3 +12,4 @@ copied_list = my_list.copy()
 my_list.clear()
 index = my_list.index("elemento_procurado")
 count = my_list.count("elemento_repetido")
+new_list = my_list + ["novo_elemento_1", "novo_elemento_2"]
