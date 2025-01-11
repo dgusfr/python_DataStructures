@@ -11,3 +11,5 @@ lista.sort(reverse=True)
 soma = sum(lista)
 open("novo_arquivo.txt", "w").close()
 with open("novo_arquivo.txt", "w") as f: f.write("Olá, mundo!")
+from math import sqrt  
+raiz = sqrt(16)
