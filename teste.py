@@ -14,3 +14,4 @@ with open("novo_arquivo.txt", "w") as f: f.write("Olá, mundo!")
 from math import sqrt  
 raiz = sqrt(16)
 class MinhaClasse: pass
+objeto = MinhaClasse()
