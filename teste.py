@@ -3,3 +3,4 @@ is_par = numero % 2 == 0
 texto_maiusculo = "olá".upper()
 meu_dicionario = {}
 meu_dicionario["chave"] = "valor"
+meu_dicionario["chave"] = "valor"
