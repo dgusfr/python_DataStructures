@@ -4,3 +4,4 @@ texto_maiusculo = "olá".upper()
 meu_dicionario = {}
 meu_dicionario["chave"] = "valor"
 meu_dicionario["chave"] = "valor"
+def dobrar(numero): return numero * 2
