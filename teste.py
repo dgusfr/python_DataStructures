@@ -16,3 +16,5 @@ from math import sqrt
 raiz = sqrt(16)
 class MinhaClasse: pass
 objeto = MinhaClasse()
+import random  
+numero_aleatorio = random.randint(1, 10)
