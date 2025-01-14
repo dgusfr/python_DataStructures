@@ -15,3 +15,4 @@ with open("novo_arquivo.txt", "r") as f: conteudo = f.read()
 from math import sqrt  
 raiz = sqrt(16)
 class MinhaClasse: pass
+objeto = MinhaClasse()
