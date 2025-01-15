@@ -19,3 +19,4 @@ class MinhaClasse: pass
 objeto = MinhaClasse()
 import random  
 numero_aleatorio = random.randint(1, 10)
+quadrados = [x**2 for x in range(5)]
