@@ -11,3 +11,5 @@ from datetime import datetime
 data_atual = datetime.now()
 numeros = [1, 2, 3, 4, 5]
 numeros_dobrados = [x * 2 for x in numeros]
+palavras = ["Python", "é", "divertido"]
+frase = " ".join(palavras)
