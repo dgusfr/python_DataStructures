@@ -4,3 +4,5 @@ frase = "Aprendendo Python"
 frase_minuscula = frase.lower()
 lista = ["Python", "Java", "C++"]
 lista.append("JavaScript")
+meu_set = set([1, 2, 3])
+meu_set.add(4)
