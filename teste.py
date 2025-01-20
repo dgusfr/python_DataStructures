@@ -9,3 +9,5 @@ meu_set.add(4)
 def quadrado(numero): return numero ** 2
 from datetime import datetime
 data_atual = datetime.now()
+numeros = [1, 2, 3, 4, 5]
+numeros_dobrados = [x * 2 for x in numeros]
