@@ -6,3 +6,4 @@ lista = ["Python", "Java", "C++"]
 lista.append("JavaScript")
 meu_set = set([1, 2, 3])
 meu_set.add(4)
+def quadrado(numero): return numero ** 2
