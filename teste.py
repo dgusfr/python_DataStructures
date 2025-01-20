@@ -13,3 +13,4 @@ numeros = [1, 2, 3, 4, 5]
 numeros_dobrados = [x * 2 for x in numeros]
 palavras = ["Python", "é", "divertido"]
 frase = " ".join(palavras)
+def verificar_positivo(numero): return numero > 0
