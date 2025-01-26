@@ -86,7 +86,6 @@ def limpar_dicionario(dicionario):
     print("Dicionário limpo com sucesso.")
 
 def processar_opcao(opcao, dicionario):
-    """Processa a opção escolhida pelo usuário."""
     if opcao == '1':
         adicionar_chave_valor(dicionario)
     elif opcao == '2':
