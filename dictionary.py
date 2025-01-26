@@ -18,7 +18,6 @@ def menu():
     print("=" * 30)
 
 def adicionar_chave_valor(dicionario):
-    """Adiciona um par chave-valor ao dicionário."""
     chave = input("Digite a chave: ")
     if chave in dicionario:
         print(f"Erro: a chave '{chave}' já existe.")
