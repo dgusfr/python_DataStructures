@@ -1,5 +1,6 @@
 # Estrutura de Dados em Python
 
+
 Uma interface de linha de comando (CLI) desenvolvida em Python que permite gerenciar e realizar operações com **tuplas**. O usuário pode criar tuplas, concatenar, buscar elementos e realizar diversas operações diretamente no terminal.
 
 ## Sumário
