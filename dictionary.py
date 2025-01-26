@@ -104,7 +104,6 @@ def processar_opcao(opcao, dicionario):
         limpar_dicionario(dicionario)
     elif opcao == '10':
         print("Saindo...")
-        sys.exit(0)
     else:
         print("Opção inválida. Tente novamente.")
 
