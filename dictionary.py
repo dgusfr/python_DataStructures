@@ -109,10 +109,6 @@ def processar_opcao(opcao, dicionario):
         print("Opção inválida. Tente novamente.")
 
 def main():
-    if sys.version_info < (3, 6):
-        print("Este script requer Python 3.6 ou superior.")
-        sys.exit(1)
-
     print("Bem-vindo à CLI de Operações com Dicionário!")
     print("Gerencie seu dicionário de forma interativa.")
 
