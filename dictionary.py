@@ -58,7 +58,6 @@ def verificar_chave(dicionario):
         print(f"A chave '{chave}' não existe no dicionário.")
 
 def listar_chaves(dicionario):
-    """Lista todas as chaves no dicionário."""
     if dicionario:
         print("Chaves no dicionário:")
         for chave in dicionario.keys():
