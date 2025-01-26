@@ -44,7 +44,6 @@ def remover_chave(dicionario):
         print(f"Erro: chave '{chave}' não encontrada.")
 
 def obter_valor(dicionario):
-    """Obtém o valor associado a uma chave no dicionário."""
     chave = input("Digite a chave: ")
     if chave in dicionario:
         print(f"O valor associado à chave '{chave}' é '{dicionario[chave]}'.")
