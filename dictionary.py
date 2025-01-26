@@ -74,7 +74,6 @@ def listar_valores(dicionario):
         print("O dicionário está vazio.")
 
 def listar_pares(dicionario):
-    """Lista todos os pares chave-valor no dicionário."""
     if dicionario:
         print("Pares chave-valor no dicionário:")
         for chave, valor in dicionario.items():
