@@ -66,7 +66,6 @@ def listar_chaves(dicionario):
         print("O dicionário está vazio.")
 
 def listar_valores(dicionario):
-    """Lista todos os valores no dicionário."""
     if dicionario:
         print("Valores no dicionário:")
         for valor in dicionario.values():
