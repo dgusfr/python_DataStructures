@@ -82,7 +82,6 @@ def listar_pares(dicionario):
         print("O dicionário está vazio.")
 
 def limpar_dicionario(dicionario):
-    """Limpa todos os pares chave-valor do dicionário."""
     dicionario.clear()
     print("Dicionário limpo com sucesso.")
 
