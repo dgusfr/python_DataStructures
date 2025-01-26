@@ -27,7 +27,6 @@ def adicionar_chave_valor(dicionario):
         print(f"Chave-valor '{chave}: {valor}' adicionada com sucesso!")
 
 def atualizar_valor(dicionario):
-    """Atualiza o valor de uma chave existente no dicionário."""
     chave = input("Digite a chave para atualizar: ")
     if chave in dicionario:
         novo_valor = input("Digite o novo valor: ")
