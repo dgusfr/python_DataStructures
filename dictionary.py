@@ -111,7 +111,6 @@ def processar_opcao(opcao, dicionario):
         print("Opção inválida. Tente novamente.")
 
 def main():
-    """Função principal que gerencia o fluxo do programa."""
     if sys.version_info < (3, 6):
         print("Este script requer Python 3.6 ou superior.")
         sys.exit(1)
