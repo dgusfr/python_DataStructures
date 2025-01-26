@@ -118,7 +118,7 @@ def main():
     print("Bem-vindo à CLI de Operações com Dicionário!")
     print("Gerencie seu dicionário de forma interativa.")
 
-    dicionario = {}  # Dicionário inicial vazio
+    dicionario = {}  
     while True:
         try:
             menu()
