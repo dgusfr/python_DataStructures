@@ -51,7 +51,6 @@ def obter_valor(dicionario):
         print(f"Erro: chave '{chave}' não encontrada.")
 
 def verificar_chave(dicionario):
-    """Verifica se uma chave está presente no dicionário."""
     chave = input("Digite a chave para verificar: ")
     if chave in dicionario:
         print(f"A chave '{chave}' existe no dicionário.")
