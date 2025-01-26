@@ -1,5 +1,3 @@
-import sys
-
 def menu():
     """Exibe o menu de operações disponíveis para o usuário."""
     print("\n" + "=" * 30)
