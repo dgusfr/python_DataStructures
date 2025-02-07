@@ -143,6 +143,8 @@ print(A - B)  # Diferença: {1, 2}
 
 ## Estruturas de Dados Avançadas
 
+---
+
 ### Listas Ligadas (Linked Lists)
 
 Estruturas lineares onde cada nó contém um valor e uma referência ao próximo nó.
