@@ -218,4 +218,3 @@ print(fila.popleft())  # Saída: 1
 - **Tuplas**: Quando precisar de uma coleção ordenada e imutável.
 - **Dicionários**: Quando precisar de acesso rápido por chave.
 - **Conjuntos**: Quando precisar de elementos únicos e operações matemáticas entre coleções.
-
