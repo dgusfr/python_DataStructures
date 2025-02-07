@@ -1,5 +1,18 @@
 # Guia de Aprendizado em Python
 
+## Sumário
+
+1. [Tipos de Dados Agregados](#tipos-de-dados-agregados)
+   - [Listas](#listas)
+   - [Tuplas](#tuplas)
+   - [Dicionários](#dicionarios)
+   - [Conjuntos (Sets)](#conjuntos-sets)
+2. [Estruturas de Dados Avançadas](#estruturas-de-dados-avancadas)
+   - [Listas Ligadas (Linked Lists)](#listas-ligadas-linked-lists)
+   - [Pilhas (Stacks)](#pilhas-stacks)
+   - [Filas (Queues)](#filas-queues)
+3. [Conclusão](#conclusao)
+
 ## Tipos de Dados Agregados
 
 Tipos de dados agregados permitem armazenar múltiplos valores em uma única estrutura. Em Python, esses tipos possibilitam agrupar valores de diferentes tipos, como inteiros, floats e strings, dentro de uma única variável.
