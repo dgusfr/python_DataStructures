@@ -13,6 +13,8 @@
    - [Filas (Queues)](#filas-queues)
 3. [Conclusão](#conclusao)
 
+---
+
 ## Tipos de Dados Agregados
 
 Tipos de dados agregados permitem armazenar múltiplos valores em uma única estrutura. Em Python, esses tipos possibilitam agrupar valores de diferentes tipos, como inteiros, floats e strings, dentro de uma única variável.
