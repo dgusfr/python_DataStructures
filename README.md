@@ -102,8 +102,6 @@ O código `lista[1]` acessa o segundo elemento da lista (índice 1), que é o va
 
 De forma análoga, `tupla[1]` acessa o segundo elemento da tupla, resultando em `42`. 
 
-Esta operação possui complexidade de tempo constante, $O(1)$, pois a localização do elemento na memória é calculada diretamente a partir do índice.
-
 ### Slicing (Fatiamento)
 
 O fatiamento (`slicing`) extrai uma subsequência a partir de um intervalo de índices, especificado como `[start:stop]`. O elemento no índice `start` é incluído, mas o elemento no índice `stop` é excluído.
@@ -116,7 +114,9 @@ tupla = (10, 20, 30, 40)
 print(tupla[1:3])  # Saída: (20, 30)
 ```
 
-A expressão `lista[1:3]` cria uma nova lista contendo os elementos do índice 1 (`20`) até o índice 2 (`30`), sem incluir o elemento do índice 3. O resultado é `[20, 30]`. O mesmo princípio se aplica à tupla, retornando uma nova tupla `(20, 30)`.
+A expressão `lista[1:3]` cria uma nova lista contendo os elementos do índice 1 (`20`) até o índice 2 (`30`), sem incluir o elemento do índice 3. 
+
+O resultado é `[20, 30]`. O mesmo princípio se aplica à tupla, retornando uma nova tupla `(20, 30)`.
 
 ### Operador `in`
 
@@ -132,7 +132,11 @@ print(20 in tupla)  # Saída: True
 print(40 in tupla)  # Saída: False
 ```
 
-Esta operação percorre a sequência para encontrar o valor. A expressão `20 in lista` retorna `True` porque `20` está presente na lista. Já `40 in lista` retorna `False`. A complexidade de tempo desta operação é, em média, linear, $O(n)$, pois no pior caso é necessário verificar todos os `n` elementos.
+Esta operação percorre a sequência para encontrar o valor. 
+
+A expressão `20 in lista` retorna `True` porque `20` está presente na lista. Já `40 in lista` retorna `False`. 
+
+A complexidade de tempo desta operação é, em média, linear, $O(n)$, pois no pior caso é necessário verificar todos os `n` elementos.
 
 
 
