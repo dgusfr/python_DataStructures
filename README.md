@@ -17,13 +17,15 @@
 
 ## Tipos de Dados Agregados
 
-Tipos de dados agregados permitem armazenar múltiplos valores em uma única estrutura. Em Python, esses tipos possibilitam agrupar valores de diferentes tipos, como inteiros, floats e strings, dentro de uma única variável.
+Tipos de dados agregados permitem armazenar múltiplos valores em uma única estrutura. 
 
 ### Listas
 
-As **listas** são coleções ordenadas e mutáveis, permitindo armazenar elementos de diferentes tipos.
+As listas são coleções ordenadas e **mutáveis**, permitindo armazenar elementos de diferentes tipos.
 
 ```python
+lista = [1, 2, 3]
+
 minha_lista = [42, "Python", 3.14, [1, 2, 3], {"chave": "valor"}]
 ```
 
