@@ -19,7 +19,7 @@
 
 Tipos de dados agregados permitem armazenar múltiplos valores em uma única estrutura. 
 
-### Listas
+## Listas
 
 As listas são coleções ordenadas e **mutáveis**, permitindo armazenar elementos de diferentes tipos.
 
@@ -45,16 +45,95 @@ print(f"Média das notas: {media}")
 
 ### Métodos para Listas
 
-- **Adicionar elementos**:
-  - `.append(item)`: Adiciona um item ao final da lista.
-  - `.insert(posição, item)`: Insere um item na posição especificada.
-- **Remover elementos**:
-  - `.remove(item)`: Remove a primeira ocorrência do item.
-  - `lista.pop(posição)`: Remove e retorna o elemento da posição especificada.
-  - `.clear()`: Remove todos os elementos da lista.
-- **Ordena elementos**:
-  - `.sort()`:
-  - `.reverse()`: 
+Listas em Python possuem métodos específicos para manipular seus elementos. Essas operações, em sua maioria, modificam a lista original diretamente (operações "in-place").
+
+Vamos usar uma lista de tarefas como exemplo prático:
+
+```python
+tarefas = ['Revisar código', 'Atualizar documentação', 'Testar novo endpoint']
+```
+
+#### Adicionar Elementos
+
+**`.append(item)`**
+Adiciona um único item ao final da lista. É a forma mais eficiente de adicionar um elemento, pois tem complexidade de tempo amortizada de $O(1)$.
+
+```python
+tarefas.append('Deploy em staging')
+
+print(f"Após append: {tarefas}")
+# Saída: Após append: ['Revisar código', 'Atualizar documentação', 'Testar novo endpoint', 'Deploy em staging']
+```
+
+**`.insert(índice, item)`**
+Insere um item em uma posição específica, deslocando os elementos subsequentes para a direita.
+
+```python
+tarefas.insert(1, 'Corrigir bug #123')
+print(f"Após insert: {tarefas}")
+# Saída: Após insert: ['Revisar código', 'Corrigir bug #123', 'Atualizar documentação', 'Testar novo endpoint', 'Deploy em staging']
+```
+
+### Remover Elementos
+
+**`.remove(item)`**
+Remove a primeira ocorrência do valor especificado. Se o item não existir, levanta um erro `ValueError`.
+
+```python
+tarefas.remove('Atualizar documentação')
+print(f"Após remove: {tarefas}")
+# Saída: Após remove: ['Revisar código', 'Corrigir bug #123', 'Testar novo endpoint', 'Deploy em staging']
+```
+
+**`.pop(índice)`**
+Remove e **retorna** o elemento de uma posição. Se nenhum índice for fornecido, remove e retorna o último item da lista.
+
+```python
+tarefa_removida = tarefas.pop(0) # Remove do índice 0
+print(f"Tarefa removida: '{tarefa_removida}'") # Saída: Tarefa removida: 'Revisar código'
+print(f"Após pop(0): {tarefas}") # Saída: Após pop(0): ['Corrigir bug #123', 'Testar novo endpoint', 'Deploy em staging']
+
+ultima_tarefa = tarefas.pop() # Remove o último
+print(f"Última tarefa removida: '{ultima_tarefa}'") # Saída: Última tarefa removida: 'Deploy em staging'
+print(f"Após pop(): {tarefas}") # Saída: Após pop(): ['Corrigir bug #123', 'Testar novo endpoint']
+```
+
+**`.clear()`**
+Remove todos os elementos, deixando a lista vazia.
+
+```python
+tarefas.clear()
+print(f"Após clear: {tarefas}")
+# Saída: Após clear: []
+```
+
+### Ordenar Elementos
+
+**`.sort()`**
+Ordena os elementos da lista "in-place" (modifica a própria lista). Por padrão, a ordem é ascendente (alfabética para strings, numérica para números).
+
+```python
+# Recriando a lista para o exemplo
+tarefas = ['Testar API', 'Corrigir bug', 'Atualizar docs', 'Refatorar código']
+tarefas.sort()
+print(f"Após sort(): {tarefas}")
+# Saída: Após sort(): ['Atualizar docs', 'Corrigir bug', 'Refatorar código', 'Testar API']
+
+# Ordenando em ordem decrescente
+tarefas.sort(reverse=True)
+print(f"Após sort(reverse=True): {tarefas}")
+# Saída: Após sort(reverse=True): ['Testar API', 'Refatorar código', 'Corrigir bug', 'Atualizar docs']
+```
+
+**`.reverse()`**
+Inverte a ordem atual dos elementos da lista, também "in-place".
+
+```python
+tarefas.reverse()
+print(f"Após reverse(): {tarefas}")
+# Saída: Após reverse(): ['Atualizar docs', 'Corrigir bug', 'Refatorar código', 'Testar API']
+```
+
 
 ---
 
