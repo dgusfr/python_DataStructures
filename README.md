@@ -45,6 +45,8 @@ print(f"Média das notas: {media}")
 
 ### Métodos para Listas
 
+- **Acessar elementos**:
+  - `lista[1]`: Retorna o elemento na segunda posição, pois a indexação das listas começam com 0.
 - **Adicionar elementos**:
   - `append(item)`: Adiciona um item ao final da lista.
   - `insert(posição, item)`: Insere um item na posição especificada.
