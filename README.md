@@ -312,33 +312,25 @@ nova_lista = lista1 + lista2
 print(nova_lista)  # Saída: [1, 2, 3, 4]
 ```
 
-O operador `+`, quando aplicado a tuplas ou listas, cria uma nova sequência contendo todos os elementos do primeiro operando, seguidos por todos os elementos do segundo. No exemplo da tupla, `nova_tupla` é uma tupla completamente nova, e as `tupla1` e `tupla2` originais permanecem inalteradas. Isso é consistente com a imutabilidade das tuplas. Para listas, embora sejam mutáveis, a concatenação com `+` também resulta em uma nova lista, sendo uma operação distinta de métodos que modificam a lista no local (in-place), como o `list.extend()`.
+O operador `+`, quando aplicado a tuplas ou listas, cria uma nova sequência contendo todos os elementos do primeiro operando, seguidos por todos os elementos do segundo. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+No exemplo da tupla, `nova_tupla` é uma tupla completamente nova, e as `tupla1` e `tupla2` originais permanecem inalteradas. Isso é consistente com a imutabilidade das tuplas. Para listas, embora sejam mutáveis, a concatenação com `+` também resulta em uma nova lista, sendo uma operação distinta de métodos que modificam a lista no local (in-place), como o `list.extend()`.
 
 
 
 
 ___
 
-### Dicionários
+<br>
+<br>
+<br>
+<br>
+<br>
+
+___
+
+
+## Dicionários
 
 Os **dicionários** armazenam dados como pares **chave-valor**.
 
@@ -375,7 +367,7 @@ meu_dicionario["nota"] = 9.5  # Adicionando novo par
 
 ---
 
-### Conjuntos (Sets)
+## Conjuntos (Sets)
 
 Os **conjuntos** armazenam **valores únicos** e não mantêm ordem.
 
@@ -399,7 +391,7 @@ print(A - B)  # Diferença: {1, 2}
 
 ---
 
-## Estruturas de Dados Avançadas
+# Estruturas de Dados Avançadas
 
 ### Listas Ligadas (Linked Lists)
 
