@@ -70,17 +70,19 @@ Insere um item em uma posição específica, deslocando os elementos subsequente
 
 ```python
 tarefas.insert(1, 'Corrigir bug #123')
+
 print(f"Após insert: {tarefas}")
 # Saída: Após insert: ['Revisar código', 'Corrigir bug #123', 'Atualizar documentação', 'Testar novo endpoint', 'Deploy em staging']
 ```
 
-### Remover Elementos
+#### Remover Elementos
 
 **`.remove(item)`**
 Remove a primeira ocorrência do valor especificado. Se o item não existir, levanta um erro `ValueError`.
 
 ```python
 tarefas.remove('Atualizar documentação')
+
 print(f"Após remove: {tarefas}")
 # Saída: Após remove: ['Revisar código', 'Corrigir bug #123', 'Testar novo endpoint', 'Deploy em staging']
 ```
@@ -103,6 +105,7 @@ Remove todos os elementos, deixando a lista vazia.
 
 ```python
 tarefas.clear()
+
 print(f"Após clear: {tarefas}")
 # Saída: Após clear: []
 ```
