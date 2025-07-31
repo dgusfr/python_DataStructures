@@ -46,13 +46,15 @@ print(f"Média das notas: {media}")
 ### Métodos para Listas
 
 - **Adicionar elementos**:
-  - `append(item)`: Adiciona um item ao final da lista.
-  - `insert(posição, item)`: Insere um item na posição especificada.
-  - `extend(iterável)`: Adiciona elementos de outro iterável à lista.
+  - `.append(item)`: Adiciona um item ao final da lista.
+  - `.insert(posição, item)`: Insere um item na posição especificada.
 - **Remover elementos**:
-  - `remove(item)`: Remove a primeira ocorrência do item.
-  - `pop(posição)`: Remove e retorna o item na posição especificada.
-  - `clear()`: Remove todos os elementos da lista.
+  - `.remove(item)`: Remove a primeira ocorrência do item.
+  - `lista.pop(posição)`: Remove e retorna o elemento da posição especificada.
+  - `.clear()`: Remove todos os elementos da lista.
+- **Ordena elementos**:
+  - `.sort()`:
+  - `.reverse()`: 
 
 ---
 
@@ -80,7 +82,7 @@ print(coordenadas[0])  # Saída: 10
 
 ---
 
-### Operações em Listas e Tuplas
+## Operações em Listas e Tuplas
 
 Listas e tuplas, por serem sequências ordenadas, compartilham operações essenciais para manipulação de seus elementos.
 
@@ -135,6 +137,28 @@ Esta operação percorre a sequência para encontrar o valor.
 A expressão `20 in lista` retorna `True` porque `20` está presente na lista. Já `40 in lista` retorna `False`. 
 
 A complexidade de tempo desta operação é, em média, linear, $O(n)$, pois no pior caso é necessário verificar todos os `n` elementos.
+
+Dando continuidade, a iteração é o processo de percorrer os elementos de uma sequência, um a um, para executar uma determinada operação em cada um deles.
+
+### Iteração sobre Elementos
+
+Tanto listas quanto tuplas são objetos iteráveis, o que significa que seus elementos podem ser acessados sequencialmente utilizando laços de repetição, como o `for`.
+
+```python
+lista = [1, 2, 3, 4]
+for item in lista:
+    print(item)
+
+tupla = (1, 2, 3, 4)
+for item in tupla:
+    print(item)
+```
+
+Em ambos os casos, o laço `for` percorre a coleção (`lista` ou `tupla`). A cada iteração, o próximo elemento da sequência é atribuído à variável `item`, e o bloco de código dentro do laço (neste caso, `print(item)`) é executado. O processo se repete até que todos os elementos tenham sido visitados.
+
+Por baixo dos panos, o laço `for` utiliza o protocolo de iteração do Python. Ele solicita um "iterador" do objeto (a lista ou tupla) e, a cada passo, chama a função `next()` nesse iterador para obter o próximo item, até que a exceção `StopIteration` seja levantada, sinalizando o fim da sequência. 
+
+Essa abstração torna o código limpo e eficiente para percorrer qualquer tipo de sequência.
 
 
 
