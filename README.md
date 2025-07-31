@@ -43,7 +43,7 @@ media = sum(notas) / len(notas)
 print(f"Média das notas: {media}")
 ```
 
-### Métodos Úteis para Listas
+### Métodos para Listas
 
 - **Adicionar elementos**:
   - `append(item)`: Adiciona um item ao final da lista.
@@ -58,7 +58,7 @@ print(f"Média das notas: {media}")
 
 ### Tuplas
 
-As **tuplas** são coleções ordenadas, porém **imutáveis**.
+As tuplas são coleções ordenadas, porém **imutáveis** e utilizam parênteses.
 
 ```python
 minha_tupla = (42, "Python", 3.14, [1, 2, 3], {"chave": "valor"})
