@@ -116,14 +116,15 @@ print(f"Após clear: {tarefas}")
 Ordena os elementos da lista "in-place" (modifica a própria lista). Por padrão, a ordem é ascendente (alfabética para strings, numérica para números).
 
 ```python
-# Recriando a lista para o exemplo
 tarefas = ['Testar API', 'Corrigir bug', 'Atualizar docs', 'Refatorar código']
 tarefas.sort()
+
 print(f"Após sort(): {tarefas}")
 # Saída: Após sort(): ['Atualizar docs', 'Corrigir bug', 'Refatorar código', 'Testar API']
 
 # Ordenando em ordem decrescente
 tarefas.sort(reverse=True)
+
 print(f"Após sort(reverse=True): {tarefas}")
 # Saída: Após sort(reverse=True): ['Testar API', 'Refatorar código', 'Corrigir bug', 'Atualizar docs']
 ```
@@ -133,6 +134,7 @@ Inverte a ordem atual dos elementos da lista, também "in-place".
 
 ```python
 tarefas.reverse()
+
 print(f"Após reverse(): {tarefas}")
 # Saída: Após reverse(): ['Atualizar docs', 'Corrigir bug', 'Refatorar código', 'Testar API']
 ```
@@ -140,7 +142,11 @@ print(f"Após reverse(): {tarefas}")
 
 ---
 
-### Tuplas
+<br>
+
+___
+
+## Tuplas
 
 As tuplas são coleções ordenadas, porém **imutáveis** e utilizam parênteses.
 
@@ -163,6 +169,17 @@ print(coordenadas[0])  # Saída: 10
 > *Observação: Apesar de imutáveis, se uma tupla contiver uma lista, essa lista pode ser alterada.*
 
 ---
+
+### Métodos para Tuplas
+
+Como tuplas são imutáveis, não temos métodos de alteração.
+
+___
+
+<br>
+
+___
+
 
 ## Operações em Listas e Tuplas
 
@@ -243,7 +260,59 @@ Por baixo dos panos, o laço `for` utiliza o protocolo de iteração do Python. 
 Essa abstração torna o código limpo e eficiente para percorrer qualquer tipo de sequência.
 
 
+___
 
+
+### Desempacotamento de Sequências
+
+O desempacotamento (ou *unpacking*) permite que os itens de um iterável, como uma lista ou tupla, sejam distribuídos em variáveis individuais em uma única linha de atribuição. A condição principal é que o número de variáveis à esquerda do operador de atribuição (`=`) deve ser igual ao número de elementos na sequência.
+
+```python
+coordenadas = (10, 20, 30)
+x, y, z = coordenadas
+print(f"x={x}, y={y}, z={z}") # Saída: x=10, y=20, z=30
+
+# Desempacotamento de Lista
+dados = [10, 20, 30]
+a, b, c = dados
+print(f"a={a}, b={b}, c={c}") # Saída: a=10, b=20, c=30
+```
+
+Na prática, a atribuição `x, y, z = coordenadas` mapeia cada variável a um elemento da tupla na ordem correspondente: `x` recebe `coordenadas[0]`, `y` recebe `coordenadas[1]`, e assim por diante. Esse mecanismo é mais legível e conciso do que realizar atribuições individuais por índice (`x = coordenadas[0]`, `y = coordenadas[1]`, etc.).
+
+O Python também suporta o **desempacotamento estendido** com o operador `*`, que permite capturar múltiplos itens restantes em uma nova lista. Isso é útil quando não se sabe o tamanho exato da sequência ou se deseja separar apenas os primeiros e/ou últimos elementos.
+
+```python
+numeros = [1, 2, 3, 4, 5]
+primeiro, *meio, ultimo = numeros
+
+print(primeiro)  # Saída: 1
+print(meio)      # Saída: [2, 3, 4]
+print(ultimo)    # Saída: 5
+```
+
+
+___
+
+### Concatenação de Tuplas e Listas
+
+Tanto tuplas quanto listas suportam o operador de concatenação (`+`) para combinar duas sequências em uma nova. É fundamental entender que essa operação sempre cria um novo objeto na memória, em vez de modificar os originais.
+
+```python
+# Concatenação de Tuplas
+tupla1 = (1, 2)
+tupla2 = (3, 4)
+nova_tupla = tupla1 + tupla2
+print(nova_tupla)  # Saída: (1, 2, 3, 4)
+
+# Concatenação de Listas
+lista1 = [1, 2]
+lista2 = [3, 4]
+nova_lista = lista1 + lista2
+print(nova_lista)  # Saída: [1, 2, 3, 4]
+```
+
+O operador `+`, quando aplicado a tuplas ou listas, cria uma nova sequência contendo todos os elementos do primeiro operando, seguidos por todos os elementos do segundo. No exemplo da tupla, `nova_tupla` é uma tupla completamente nova, e as `tupla1` e `tupla2` originais permanecem inalteradas. Isso é consistente com a imutabilidade das tuplas. Para listas, embora sejam mutáveis, a concatenação com `+` também resulta em uma nova lista, sendo uma operação distinta de métodos que modificam a lista no local (in-place), como o `list.extend()`.
 
 
 
