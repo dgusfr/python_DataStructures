@@ -2,16 +2,41 @@
 
 ## Sumário
 
+## Sumário
+
 1. [Tipos de Dados Agregados](#tipos-de-dados-agregados)
    - [Listas](#listas)
+     - [Métodos para Listas](#métodos-para-listas)
+     - [Adicionar Elementos](#adicionar-elementos)
+     - [Remover Elementos](#remover-elementos)
+     - [Ordenar Elementos](#ordenar-elementos)
    - [Tuplas](#tuplas)
-   - [Dicionários](#dicionarios)
-   - [Conjuntos (Sets)](#conjuntos-sets)
-2. [Estruturas de Dados Avançadas](#estruturas-de-dados-avancadas)
-   - [Listas Ligadas (Linked Lists)](#listas-ligadas-linked-lists)
-   - [Pilhas (Stacks)](#pilhas-stacks)
-   - [Filas (Queues)](#filas-queues)
-3. [Conclusão](#conclusao)
+     - [Métodos para Tuplas](#métodos-para-tuplas)
+   - [Operações em Listas e Tuplas](#operações-em-listas-e-tuplas)
+     - [Acesso por Índice](#acesso-por-índice)
+     - [Slicing (Fatiamento)](#slicing-fatiamento)
+     - [Operador `in`](#operador-in)
+     - [Iteração sobre Elementos](#iteração-sobre-elementos)
+     - [Desempacotamento de Sequências](#desempacotamento-de-sequências)
+     - [Concatenação de Tuplas e Listas](#concatenação-de-tuplas-e-listas)
+2. [Conjuntos (Sets)](#conjuntos-sets)
+   - [Conjunto Vazio](#conjunto-vazio)
+   - [Verificando a Existência de um Elemento](#verificando-a-existência-de-um-elemento)
+   - [Métodos de Manipulação](#métodos-de-manipulação)
+   - [Operações entre Conjuntos](#operações-entre-conjuntos)
+   - [Outros Métodos e Funções](#outros-métodos-e-funções)
+3. [Dicionários](#dicionários)
+   - [Dicionário Vazio](#dicionário-vazio)
+   - [Criando com Lista de Tuplas](#criando-com-lista-de-tuplas)
+   - [Tipos de Chaves e Valores](#tipos-de-chaves-e-valores)
+   - [Acessando e Modificando Dados](#acessando-e-modificando-dados)
+   - [Verificando a Existência de uma Chave](#verificando-a-existência-de-uma-chave)
+   - [Métodos de Dicionários](#métodos-de-dicionários)
+     - [Métodos de Visualização e Contagem](#métodos-de-visualização-e-contagem)
+     - [Métodos de Busca e Remoção](#métodos-de-busca-e-remoção)
+     - [Outros Métodos de Manipulação](#outros-métodos-de-manipulação)
+   - [Exemplo Prático: Dicionários e Conjuntos](#exemplo-prático-dicionários-e-conjuntos)
+4. [Estruturas de Dados Avançadas](#estruturas-de-dados-avançadas)
 
 ---
 
@@ -330,160 +355,272 @@ ___
 ___
 
 
-## Dicionários
+## Conjuntos (Sets)
 
-Os **dicionários** armazenam dados como pares **chave-valor**.
+Um conjunto é uma coleção não ordenada de elementos, sem elementos repetidos.
 
 ```python
-meu_dicionario = {
-    "nome": "Diego",
+# Chaves ({}) podem ser usadas para criar conjuntos diretamente.
+conjunto1 = {'a', 'b', 'c'}
+
+# A função set() pode ser usada para criar conjuntos,
+# especialmente a partir de um iterável ou para criar um conjunto vazio.
+conjunto2 = set([3, 4, 5, 6])
+```
+
+### Conjunto Vazio
+
+Para criar um conjunto vazio, use `set()` sem argumentos. Chaves vazias (`{}`) criam um dicionário, não um conjunto.
+
+```python
+# Forma correta de criar um conjunto vazio
+conjunto_vazio = set()
+print(type(conjunto_vazio)) # <class 'set'>
+
+# Chaves vazias criam um dicionário
+nao_e_um_conjunto = {}
+print(type(nao_e_um_conjunto)) # <class 'dict'>
+```
+
+### Verificando a Existência de um Elemento
+
+Para verificar se um item pertence a um conjunto, utilize os operadores `in` e `not in`.
+
+  * **Contexto:** `conjunto = {1, 2, 3, 4, 5}`
+
+| Operador | Conceito                                                                                                  | Exemplo                 | Saída |
+| :------- | :-------------------------------------------------------------------------------------------------------- | :---------------------- | :---- |
+| `in`     | Retorna `True` se o elemento estiver presente no conjunto e `False` caso contrário.                       | `print(3 in conjunto)`  | True  |
+| `not in` | Retorna `True` se o elemento **não** estiver presente no conjunto e `False` caso contrário.                 | `print(6 not in conjunto)` | True  |
+
+-----
+
+### Métodos de Manipulação
+
+Conjuntos possuem diversos métodos para adicionar e remover elementos.
+
+  * **Contexto:** `conjunto = {1, 2, 3}`
+
+| Método             | Conceito                                                | Exemplo                  | Conjunto Resultante |
+| :----------------- | :------------------------------------------------------ | :----------------------- | :------------------ |
+| `add(elemento)`    | Adiciona um único elemento.                             | `conjunto.add(4)`        | `{1, 2, 3, 4}`      |
+| `update(iterável)` | Adiciona múltiplos elementos de um iterável.            | `conjunto.update([5, 6])`  | `{1, 2, 3, 5, 6}`   |
+| `remove(elemento)` | Remove um item. Gera `KeyError` se o item não existir.  | `conjunto.remove(2)`     | `{1, 3}`            |
+| `discard(elemento)`| Remove um item. Não gera erro se o item não existir.    | `conjunto.discard(2)`    | `{1, 3}`            |
+| `pop()`            | Remove e retorna um elemento arbitrário do conjunto.    | `conjunto.pop()`         | Varia, ex: `{2, 3}` |
+| `clear()`          | Remove todos os elementos do conjunto.                  | `conjunto.clear()`       | `set()`             |
+
+-----
+
+### Operações entre Conjuntos
+
+Existem diversos métodos e operadores para realizar operações matemáticas entre conjuntos.
+
+  * **Contexto:** `a = {1, 2, 3}` e `b = {3, 4, 5}`
+
+| Método                               | Operador | Conceito                                                                 | Exemplo                        | Saída       |
+| :----------------------------------- | :------- | :----------------------------------------------------------------------- | :----------------------------- | :---------- |
+| `union(set2)`                        | `\|`     | **União**: Retorna um conjunto com todos os elementos de ambos.            | `a.union(b)`                   | `{1, 2, 3, 4, 5}` |
+| `intersection(set2)`                 | `&`      | **Interseção**: Retorna um conjunto com os elementos comuns a ambos.       | `a.intersection(b)`            | `{3}`       |
+| `difference(set2)`                   | `-`      | **Diferença**: Retorna os elementos que estão no primeiro conjunto, mas não no segundo. | `a.difference(b)`              | `{1, 2}`    |
+| `symmetric_difference(set2)`         | `^`      | **Diferença Simétrica**: Retorna os elementos que estão em um dos conjuntos, mas não em ambos. | `a.symmetric_difference(b)`    | `{1, 2, 4, 5}`|
+
+-----
+
+### Outros Métodos e Funções
+
+Métodos para verificação de relacionamento, contagem e cópia.
+
+  * **Contexto:** `a = {1, 2}`, `b = {1, 2, 3}`, `c = {4, 5}`
+
+| Método             | Operador | Conceito                                                                 | Exemplo               | Saída   |
+| :----------------- | :------- | :----------------------------------------------------------------------- | :-------------------- | :------ |
+| `issubset(set2)`   | `<=`     | Verifica se um conjunto é **subconjunto** de outro.                      | `a.issubset(b)`       | `True`  |
+| `issuperset(set2)` | `>=`     | Verifica se um conjunto é **superconjunto** de outro.                    | `b.issuperset(a)`     | `True`  |
+| `isdisjoint(set2)` |          | Verifica se os conjuntos não têm elementos em comum (são disjuntos).     | `a.isdisjoint(c)`     | `True`  |
+| `len(conjunto)`    |          | Retorna a quantidade de elementos de um conjunto.                        | `len(a)`              | `2`     |
+| `copy()`           |          | Retorna uma cópia rasa (*shallow copy*) do conjunto.                     | `copia = a.copy()`    | `{1, 2}`|
+
+
+---
+
+<br>
+<br>
+<br>
+
+___
+
+
+
+## Dicionários
+
+Um dicionário é uma coleção de pares chave-valor, onde cada chave única mapeia para um valor. Os dicionários são mutáveis e não ordenados (embora, a partir do Python 3.7, preservem a ordem de inserção).
+
+```python
+# Usamos chaves ({}) para criar dicionários diretamente,
+# inserindo pares chave-valor.
+dic1 = {"nome": "Ana", "nota": 10.0}
+
+# A função dict() também pode ser usada, passando pares
+# chave-valor como argumentos nomeados.
+dic2 = dict(nome="Eva", nota=9.4)
+```
+
+### Dicionário Vazio
+
+Um dicionário vazio pode ser criado usando `{}` ou a função `dict()` sem argumentos.
+
+```python
+dicionario_vazio1 = {}
+dicionario_vazio2 = dict()
+```
+
+### Criando com Lista de Tuplas
+
+É possível criar um dicionário a partir de um iterável de pares (como uma lista de tuplas), onde cada tupla contém uma chave e um valor.
+
+```python
+lista_de_tuplas = [("nome", "Ana"), ("nota", 10.0)]
+dicionario = dict(lista_de_tuplas)
+
+print(dicionario)
+# Saída: {'nome': 'Ana', 'nota': 10.0}
+```
+
+-----
+
+### Tipos de Chaves e Valores
+
+#### Tipos Permitidos para Chaves
+
+As chaves de um dicionário devem ser de um tipo de dado **imutável**.
+
+  * **Permitido:** Strings, números (int, float), tuplas.
+  * **Não permitido:** Listas, outros dicionários ou qualquer objeto mutável.
+
+<!-- end list -->
+
+```python
+# Chaves válidas (string, inteiro, tupla)
+dicionario_valido = {
+    "nome": "Ana",
+    1: "um",
+    (2, 3): "par ordenado"
+}
+
+# Tentar usar uma lista como chave gera um erro
+# dicionario_invalido = {[1, 2]: "lista"}
+# TypeError: unhashable type: 'list'
+```
+
+#### Tipos Permitidos para Valores
+
+Os valores de um dicionário podem ser de **qualquer tipo de dado**, incluindo outros dicionários, listas e objetos.
+
+```python
+dicionario = {
+    "nome": "João",
     "idade": 25,
-    "cursos": ["Python", "Java", "C++"],
-    "matriculado": True
+    "notas": [10.0, 6.3, 7.5],
+    "endereco": {"cidade": "São Paulo", "bairro": "Centro"}
 }
 ```
 
-**Características:**
-- **Mutáveis**: Permitem adicionar, remover e modificar elementos.
-- **Chaves únicas**: Cada chave deve ser única dentro do dicionário.
-- **Acesso rápido**: Recuperação eficiente de valores associados a chaves.
+-----
 
-**Métodos Úteis:**
-- **Adicionar/Modificar**:
-  - `dicionario[chave] = valor`
-  - `update({chave: valor})`
-- **Remover**:
-  - `pop(chave)`
-  - `del dicionario[chave]`
-  - `clear()`
+### Acessando e Modificando Dados
 
-**Exemplo:**
+Podemos acessar, modificar e remover itens usando a chave entre colchetes `[]`.
+
+  * **Contexto:** `dic = {"nome": "Ana", "nota": 10.0}`
+
+| Operação                          | Conceito                  | Exemplo                | Resultado                                |
+| :-------------------------------- | :------------------------ | :--------------------- | :--------------------------------------- |
+| `dicionario[chave]`               | Acessar um valor.         | `dic["nome"]`          | Retorna `"Ana"`                          |
+| `dicionario[chave] = valor`       | Atribuir/modificar um valor. | `dic["nota"] = 9.2`    | `dic` se torna `{'nome': 'Ana', 'nota': 9.2}` |
+| `del dicionario[chave]`           | Remover um item.          | `del dic["nome"]`      | `dic` se torna `{'nota': 9.2}`             |
+
+### Verificando a Existência de uma Chave
+
+Use os operadores `in` e `not in` para verificar se uma chave existe no dicionário.
+
+  * **Contexto:** `dic = {"nome": "Ana", "nota": 10.0}`
+
+| Operador | Conceito                                              | Exemplo                 | Saída |
+| :------- | :---------------------------------------------------- | :---------------------- | :---- |
+| `in`     | Retorna `True` se a chave estiver presente.           | `print("nome" in dic)`  | True  |
+| `not in` | Retorna `True` se a chave **não** estiver presente. | `print("idade" not in dic)`| True |
+
+-----
+
+### Métodos de Dicionários
+
+#### Métodos de Visualização e Contagem
+
+  * **Contexto:** `dicionario = {"nome": "João", "idade": 28}`
+
+| Método           | Conceito                                  | Exemplo             | Saída                                      |
+| :--------------- | :---------------------------------------- | :------------------ | :----------------------------------------- |
+| `keys()`         | Retorna uma visão das chaves.             | `dicionario.keys()` | `dict_keys(['nome', 'idade'])`             |
+| `values()`       | Retorna uma visão dos valores.            | `dicionario.values()`| `dict_values(['João', 28])`                |
+| `items()`        | Retorna uma visão dos pares (chave, valor).| `dicionario.items()` | `dict_items([('nome', 'João'), ('idade', 28)])` |
+| `len(dicionario)`| Retorna o número de pares chave-valor.    | `len(dicionario)`   | `2`                                        |
+
+#### Métodos de Busca e Remoção
+
+  * **Contexto:** `dicionario = {"nome": "João", "idade": 28}`
+
+| Método                          | Conceito                                                              | Exemplo                               | Saída/Resultado                                  |
+| :------------------------------ | :-------------------------------------------------------------------- | :------------------------------------ | :----------------------------------------------- |
+| `get(chave, padrão=None)`       | Obtém um valor. Retorna `padrão` (ou `None`) se a chave não existir, sem gerar erro. | `dicionario.get("altura", "N/A")` | `"N/A"`                                          |
+| `pop(chave, padrão)`            | Remove uma chave e retorna seu valor. Gera `KeyError` se a chave não existir e `padrão` não for fornecido. | `dicionario.pop("idade")`               | Retorna `28` e `dicionario` se torna `{'nome': 'João'}` |
+| `list(dicionario)`              | Converte as chaves do dicionário para uma lista.                      | `chaves = list(dicionario)`           | `chaves` será `['nome', 'idade']`                |
+| `clear()`                       | Apaga todos os itens do dicionário.                                   | `dicionario.clear()`                  | `dicionario` se torna `{}`                       |
+
+#### Outros Métodos de Manipulação
+
+  * **Contexto:** `dicionario = {"a": 1, "b": 2, "c": 3}`
+
+| Método                | Conceito                                                              | Exemplo                             | Resultado                                  |
+| :-------------------- | :-------------------------------------------------------------------- | :---------------------------------- | :----------------------------------------- |
+| `popitem()`           | Remove e retorna o último par (chave, valor) inserido.                 | `dicionario.popitem()`              | Retorna `('c', 3)` e `dicionario` vira `{'a': 1, 'b': 2}` |
+| `reversed(dicionario)`| Retorna um iterador reverso sobre as chaves.                          | `list(reversed(dicionario))`        | `['c', 'b', 'a']`                          |
+| `update([outro])`     | Atualiza o dicionário com os pares chave-valor de outro.                | `dicionario.update({"c": 4, "d": 5})` | `dicionario` vira `{'a': 1, 'b': 2, 'c': 4, 'd': 5}` |
+| `copy()`              | Retorna uma cópia rasa (*shallow copy*) do dicionário.                  | `copia = dicionario.copy()`         | `copia` será `{'a': 1, 'b': 2, 'c': 3}`     |
+
+-----
+
+### Exemplo Prático: Dicionários e Conjuntos
+
+É comum combinar estruturas de dados. Abaixo, um dicionário onde os valores são conjuntos.
 
 ```python
-print(meu_dicionario["nome"])  # Saída: Diego
-meu_dicionario["idade"] = 26  # Modificando valor
-meu_dicionario["nota"] = 9.5  # Adicionando novo par
+# Dicionário com conjuntos como valores
+estoque = {
+    "frutas": {"maçã", "uva"},
+    "verduras": {"cenoura", "alface"}
+}
+
+# Adicionando um item ao conjunto de frutas
+estoque["frutas"].add("morango")
+
+# Removendo um item do conjunto de verduras
+estoque["verduras"].discard("alface")
+
+print(estoque)
+# Saída: {'frutas': {'uva', 'maçã', 'morango'}, 'verduras': {'cenoura'}}
 ```
 
----
+___
 
-## Conjuntos (Sets)
+<br>
+<br>
+<br>
+<br>
+<br>
 
-Os **conjuntos** armazenam **valores únicos** e não mantêm ordem.
+___
 
-```python
-frutas = {"maçã", "banana", "laranja"}
-```
-
-**Características:**
-- **Elementos únicos**: Não permite duplicatas.
-- **Operações matemáticas**: União, interseção, diferença.
-
-**Exemplo:**
-
-```python
-A = {1, 2, 3}
-B = {3, 4, 5}
-print(A | B)  # União: {1, 2, 3, 4, 5}
-print(A & B)  # Interseção: {3}
-print(A - B)  # Diferença: {1, 2}
-```
-
----
 
 # Estruturas de Dados Avançadas
 
-### Listas Ligadas (Linked Lists)
-
-Estruturas lineares onde cada nó contém um valor e uma referência ao próximo nó.
-
-```python
-class Node:
-    def __init__(self, valor):
-        self.valor = valor
-        self.proximo = None
-
-class LinkedList:
-    def __init__(self):
-        self.head = None
-    
-    def inserir(self, valor):
-        novo_no = Node(valor)
-        novo_no.proximo = self.head
-        self.head = novo_no
-    
-    def exibir(self):
-        atual = self.head
-        while atual:
-            print(atual.valor, end=" -> ")
-            atual = atual.proximo
-        print("None")
-```
-
-**Uso:**
-
-```python
-lista = LinkedList()
-lista.inserir(10)
-lista.inserir(20)
-lista.inserir(30)
-lista.exibir()  # Saída: 30 -> 20 -> 10 -> None
-```
-
----
-
-### Pilhas (Stacks)
-
-Estrutura LIFO (Last In, First Out).
-
-```python
-class Pilha:
-    def __init__(self):
-        self.itens = []
-    
-    def push(self, item):
-        self.itens.append(item)
-    
-    def pop(self):
-        return self.itens.pop()
-
-pilha = Pilha()
-pilha.push(5)
-pilha.push(10)
-print(pilha.pop())  # Saída: 10
-```
-
----
-
-### Filas (Queues)
-
-Estrutura FIFO (First In, First Out).
-
-```python
-from collections import deque
-
-fila = deque()
-fila.append(1)
-fila.append(2)
-fila.append(3)
-print(fila.popleft())  # Saída: 1
-```
-
----
-
-## Conclusão
-
-| Estrutura    | Ordenada | Mutável | Permite Duplicatas |
-|-------------|---------|---------|----------------|
-| **Lista** | ✅ | ✅ | ✅ |
-| **Tupla** | ✅ | ❌ | ✅ |
-| **Dicionário** | ✅ (Python 3.7+) | ✅ | ❌ (chaves únicas) |
-| **Conjunto** | ❌ | ✅ | ❌ |
-
-**Quando usar cada uma?**
-- **Listas**: Quando precisar de uma coleção ordenada e mutável.
-- **Tuplas**: Quando precisar de uma coleção ordenada e imutável.
-- **Dicionários**: Quando precisar de acesso rápido por chave.
-- **Conjuntos**: Quando precisar de elementos únicos e operações matemáticas entre coleções.
-
----
