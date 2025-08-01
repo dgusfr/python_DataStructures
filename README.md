@@ -2,8 +2,6 @@
 
 ## Sumário
 
-## Sumário
-
 1. [Tipos de Dados Agregados](#tipos-de-dados-agregados)
    - [Listas](#listas)
      - [Métodos para Listas](#métodos-para-listas)
