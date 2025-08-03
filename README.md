@@ -453,13 +453,18 @@ ___
 
 Um dicionário é uma coleção de pares chave-valor, onde cada chave única mapeia para um valor. Os dicionários são mutáveis e não ordenados (embora, a partir do Python 3.7, preservem a ordem de inserção).
 
+Formas de criar um Dicionário:
+
+* Chaves `{ }`
+
 ```python
-# Usamos chaves ({}) para criar dicionários diretamente,
 # inserindo pares chave-valor.
 dic1 = {"nome": "Ana", "nota": 10.0}
+```
 
-# A função dict() também pode ser usada, passando pares
-# chave-valor como argumentos nomeados.
+* Função `dict( )`
+```python
+# passando pares chave-valor como argumentos nomeados.
 dic2 = dict(nome="Eva", nota=9.4)
 ```
 
