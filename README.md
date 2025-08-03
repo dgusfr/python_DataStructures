@@ -477,7 +477,7 @@ dicionario_vazio1 = {}
 dicionario_vazio2 = dict()
 ```
 
-### Criando com Lista de Tuplas
+### Criando Dicionário com Lista de Tuplas
 
 É possível criar um dicionário a partir de um iterável de pares (como uma lista de tuplas), onde cada tupla contém uma chave e um valor.
 
