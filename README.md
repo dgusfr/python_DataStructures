@@ -500,8 +500,6 @@ As chaves de um dicionário devem ser de um tipo de dado **imutável**.
   * **Permitido:** Strings, números (int, float), tuplas.
   * **Não permitido:** Listas, outros dicionários ou qualquer objeto mutável.
 
-<!-- end list -->
-
 ```python
 # Chaves válidas (string, inteiro, tupla)
 dicionario_valido = {
@@ -510,8 +508,8 @@ dicionario_valido = {
     (2, 3): "par ordenado"
 }
 
-# Tentar usar uma lista como chave gera um erro
-# dicionario_invalido = {[1, 2]: "lista"}
+# Chaves Inválidas
+dicionario_invalido = {[1, 2]: "lista"}
 # TypeError: unhashable type: 'list'
 ```
 
