@@ -357,27 +357,26 @@ ___
 
 Um conjunto é uma coleção não ordenada de elementos, sem elementos repetidos.
 
-```python
-# Chaves ({}) podem ser usadas para criar conjuntos diretamente.
-conjunto1 = {'a', 'b', 'c'}
+Formas de criar um Conjunto:
 
-# A função set() pode ser usada para criar conjuntos,
-# especialmente a partir de um iterável ou para criar um conjunto vazio.
+* Chaves `{ }`
+
+```python
+conjunto1 = {'a', 'b', 'c'}
+```
+
+* Função `set( )`
+```python
 conjunto2 = set([3, 4, 5, 6])
 ```
 
 ### Conjunto Vazio
 
-Para criar um conjunto vazio, use `set()` sem argumentos. Chaves vazias (`{}`) criam um dicionário, não um conjunto.
+Para criar um conjunto vazio, **sempre**** use `set()` sem argumentos. Chaves vazias (`{}`) criam um dicionário, não um conjunto.
 
 ```python
-# Forma correta de criar um conjunto vazio
 conjunto_vazio = set()
 print(type(conjunto_vazio)) # <class 'set'>
-
-# Chaves vazias criam um dicionário
-nao_e_um_conjunto = {}
-print(type(nao_e_um_conjunto)) # <class 'dict'>
 ```
 
 ### Verificando a Existência de um Elemento
