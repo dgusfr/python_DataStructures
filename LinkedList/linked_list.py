@@ -30,7 +30,7 @@ class LinkedList:
             return ponteiro.data
         raise IndexError("list index out of range")
 
-    def __setitem__(self, posicao_desejada, elem):
+    def __setitem__(self, posicao_desejada, elemento):
         ponteiro = self.head
         for i in range(posicao_desejada):
             if ponteiro:
@@ -38,7 +38,7 @@ class LinkedList:
             else:
                 raise IndexError("list index out of range")
         if ponteiro:
-            ponteiro.data = elem
+            ponteiro.data = elemento
         else:
             raise IndexError("list index out of range")
 
@@ -51,3 +51,14 @@ class LinkedList:
             pointer = pointer.next
             indice = indice + 1
         raise ValueError("{} is not in list".format(elemento))
+
+    def insere_qualquer_posicao(self, index, elemento):
+        node = Node(elemento)
+        if index == 0:
+            node.next = self.head
+            self.head = node
+        else:
+            pointer = self._getnode(index - 1)
+            node.next = pointer.next
+            pointer.next = node
+        self._size = self._size + 1
